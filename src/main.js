@@ -1,7 +1,8 @@
 #!/usr/bin/env node
-const fs = require('fs');
-const path = require('path');
-const inquirer = require('inquirer');
+import fs from "fs";
+import path from "path";
+import inquirer from "inquirer";
+import { spawn } from "child_process";
 
 const TEMPLATE_REPO = 'https://github.com/ManitVig/GoTHAM-starter-app.git';
 
@@ -24,7 +25,7 @@ async function createProject(projectPath, goProjectIdentifier) {
   console.log(`Cloning template repository: ${TEMPLATE_REPO}`);
   // Use shell commands for cloning (consider using a promise-based library for advanced handling)
   await new Promise((resolve, reject) => {
-    const child = require('child_process').spawn('git', ['clone', TEMPLATE_REPO, projectDir]);
+    const child = spawn('git', ['clone', TEMPLATE_REPO, projectDir]);
     child.stdout.on('data', (data) => console.log(data.toString()));
     child.stderr.on('data', (data) => console.error(data.toString()));
     child.on('close', (code) => {
