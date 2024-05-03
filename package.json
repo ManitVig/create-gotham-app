@@ -1,0 +1,14 @@
+{
+  "name": "create-gotham-app",
+  "version": "1.0.0",
+  "description": "tool to quickly setup a new project using the GoTHAM stack.",
+  "main": "src/main.js",
+  "bin": {
+    "create-gotham-app": "src/main.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Manit Vig",
+  "license": "MIT"
+}
