@@ -33,7 +33,7 @@ This guide walks you through setting up a new Go project using the create-gotham
      1. run `bun install`
 8. Run the project using command `air`
 
-## Additional Notes:
+## Additional Notes
 - The create-gotham-app script takes care of cloning the GoTHAM starter app template repository, initializing the Go module (go.mod), and modifying import paths within the codebase to reflect your chosen project identifier.
 - Remember to replace <project-path> with the actual path where you want to create the project and <go-project-identifier> with your desired Go project identifier that follows Go package naming conventions (lowercase alphanumeric characters with underscores and hyphens).
    
